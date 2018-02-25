@@ -8,11 +8,11 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Byungju Jin # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: learning. # add description
+author-img: byungjujin.jpg # add your photo
+about-author: 맥주좋아함 # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
+social-github: # add your Github handle
 social-linkedin: # add your Linkedin handle
 social-email: jinbju@gmail.com # add your Email address
 
