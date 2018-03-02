@@ -1,3 +1,3 @@
 # Byungju Jin Blog
 
-![](https://havebeard.com)
+https://havebeard.com
