@@ -1,7 +1,7 @@
 ---
 layout: post
 title: required가 붙은 input의 label에 별 붙이기
-date: 2018-02-13 21:00:00 +0900
+date: 2018-02-25 21:00:00 +0900
 tags: css
 ---
 
