@@ -19,14 +19,16 @@ tags: [https ssl]
 구글링해보면 알겠지만 여러 회사의 후원으로 운영되는 Let's Encrypt 를 통해
 쉬우면서도 무료로 SSL 적용이 가능하다.
 
-1. https://letsencrypt.org
+https://letsencrypt.org
+---------------
 
 일단 [letsencrypt 홈피](https://letsencrypt.org "letsencrypt") 에 가보자.
 [Get Started](https://letsencrypt.org/getting-started/)를 눌러 이동해 보면
 영어가 잔뜩 나와 당황할 지 모르지만 핵심 내용은 아래 한줄이 전부이다.
 We recommend that most people with shell access use the [Certbot](https://certbot.eff.org) ACME client.
 
-2. https://certbot.eff.org
+https://certbot.eff.org
+---------------
 
 사실 1번의 내용은 읽을 필요가 없지만 혹시나 하는 분들이 있을까 하여 써 보았다.
 본격적으로 certbot 의 홈페이지로 이동하면 Software(웹서버)는 뭘 쓰는지?
@@ -35,7 +37,8 @@ System(서버OS)은 뭘 쓰는지? 고르게 되어 있다.
 
 그럼 다음 페이지로 자동으로 넘어가는데, Install 부분과 Get Started 부분 까지 설치 명령어만 실행하면 끝!
 
-3. nginx 혹은 apache conf설정 변경
+nginx 혹은 apache conf설정 변경
+---------------
 
 선택한 웹서버 혹은 OS마다 다를 순 있지만, 비슷하게 셋팅을 하면 된다.
 설치시 certonly옵션을 넣지 않는다면 nginx.conf 혹은 httpd.conf(apache의 경우) 값까지도 자동으로 추가해 주었다.
@@ -109,7 +112,8 @@ service nginx restart 명령어로 nginx를 리스타트 한다.
 {% endhighlight %}
 
 
-4. 인증서 갱신
+인증서 갱신
+---------------
 
 무료이기 때문에 인증서의 유효기간이 90일(3개월)으로 짧고 그 기간 이전에 renewal이 필요하다.
 날짜가 얼마 안남았을 때에만 실제 갱신을 수행하고 기간이 남았다면 skip하도록 되어 있기때문에
@@ -130,7 +134,8 @@ certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start"
 {% endhighlight %}
 
 
-5. 적용하자
+적용하자
+---------------
 
 공짜로 SSL인증을 쓰게 해주는 Let's Encrypt에 감사한 마음을 가지며
 어렵지 않은 내용이기에 내 사이트에도 https를 적용하도록 하자.
