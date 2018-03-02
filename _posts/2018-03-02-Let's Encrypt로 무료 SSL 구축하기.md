@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Let's Encrypt로 무료 SSL 구축하기
-date: 2018-02-25 21:00:00 +0900
+date: 2018-03-02 21:00:00 +0900
 tags: [https ssl]
 ---
 
@@ -98,23 +98,11 @@ service nginx restart 명령어로 nginx를 리스타트 한다.
         SSLCertificateFile /etc/letsencrypt/live/example.com/cert.pem
         SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
         SSLCertificateChainFile /etc/letsencrypt/live/example.com/chain.pem
- 
-        Header always set Strict-Transport-Security "max-age=15768000"
- 
+  
         RequestHeader append "X-Forwarded-Proto" "https"
         RequestHeader set "X-Forwarded-Ssl" "on"
 </VirtualHost>
 
-    SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
-    SSLCipherSuite ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:ECDHE-ECDSA-DES-CBC3-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA:!DSS
-    SSLHonorCipherOrder on
-    SSLCompression off
-    SSLSessionTickets off
-
-    SSLUseStapling on
-    SSLStaplingResponderTimeout 5
-    SSLStaplingReturnResponderErrors off
-    SSLStaplingCache shmcb:/var/run/ocsp(128000)
 {% endhighlight %}
 
 
@@ -127,11 +115,13 @@ service nginx restart 명령어로 nginx를 리스타트 한다.
 
 crontab -e 를 실행하고, 간단히 아래와 같이 추가하면 된다.
 (아래의 예제 매일 3am에 실행)
+
 {% highlight ruby %}
 0 3 * * * certbot renew
 {% endhighlight %}
 
 리뉴얼 전, 후에 nginx 재기동이라던지 추가 작업이 필요하면 --pre-hook, --post-hook 옵션을 사용자면 된다.
+
 {% highlight ruby %}
 certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start"
 {% endhighlight %}
