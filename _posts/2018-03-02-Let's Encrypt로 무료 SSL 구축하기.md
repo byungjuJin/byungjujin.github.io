@@ -20,12 +20,14 @@ tags: [https ssl]
 쉬우면서도 무료로 SSL 적용이 가능하다.
 
 1. https://letsencrypt.org
+
 일단 [letsencrypt 홈피](https://letsencrypt.org "letsencrypt") 에 가보자.
 [Get Started](https://letsencrypt.org/getting-started/)를 눌러 이동해 보면
 영어가 잔뜩 나와 당황할 지 모르지만 핵심 내용은 아래 한줄이 전부이다.
 We recommend that most people with shell access use the [Certbot](https://certbot.eff.org) ACME client.
 
 2. https://certbot.eff.org
+
 사실 1번의 내용은 읽을 필요가 없지만 혹시나 하는 분들이 있을까 하여 써 보았다.
 본격적으로 certbot 의 홈페이지로 이동하면 Software(웹서버)는 뭘 쓰는지?
 System(서버OS)은 뭘 쓰는지? 고르게 되어 있다.
@@ -34,6 +36,7 @@ System(서버OS)은 뭘 쓰는지? 고르게 되어 있다.
 그럼 다음 페이지로 자동으로 넘어가는데, Install 부분과 Get Started 부분 까지 설치 명령어만 실행하면 끝!
 
 3. nginx 혹은 apache conf설정 변경
+
 선택한 웹서버 혹은 OS마다 다를 순 있지만, 비슷하게 셋팅을 하면 된다.
 설치시 certonly옵션을 넣지 않는다면 nginx.conf 혹은 httpd.conf(apache의 경우) 값까지도 자동으로 추가해 주었다.
 
