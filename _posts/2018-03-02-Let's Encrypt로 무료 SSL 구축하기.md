@@ -2,7 +2,7 @@
 layout: post
 title: Let's Encrypt로 무료 SSL 구축하기
 date: 2018-03-02 21:00:00 +0900
-tags: [https ssl]
+tags: [https, ssl]
 ---
 
 ![https와 안전함]({{site.baseurl}}/assets/img/https_safe.png)
