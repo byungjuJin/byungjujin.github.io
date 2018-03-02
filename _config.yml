@@ -23,7 +23,7 @@ discus-identifier: havebeard # add your discus identifier
 analytics: UA-88866231-1 # Google Analytics
 
 # Build Settings
-markdown: kramdown
+# markdown: kramdown
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
