@@ -3,6 +3,7 @@ layout: post
 title: Let's Encrypt로 무료 SSL 구축하기
 date: 2018-03-02 21:00:00 +0900
 tags: [https, ssl]
+category: 서버
 ---
 
 ![https와 안전함]({{site.baseurl}}/assets/img/https_safe.png)
@@ -13,20 +14,26 @@ tags: [https, ssl]
 당연히도 안전한 사이트가 사용자에게 신뢰를 주지 않을까?
 실제의 보안 여부와 상관없이라도.
 
+
+
 ## Let's Encrypt
 사이트에 SSL(HTTPS) 적용을 통해 안전한 사이트로 거듭날 수 있다.
 >웹호스팅을 통해 홈페이지를 운영하는 경우 아래의 내용은 적용이 불가능하다. 다만 외부 서비스를 통해 HTTP를 HTTPS로 리다이렉트 해주는 식으로 우회하는 방법이 있는데, 다음 [링크](https://jsdev.kr/t/https-cloudflare-flexible-ssl/1973)를 읽어보기를 추천한다. 
 구글링해보면 알겠지만 여러 회사의 후원으로 운영되는 Let's Encrypt 를 통해
 쉬우면서도 무료로 SSL 적용이 가능하다.
 
-# https://letsencrypt.org
+
+
+# http\://letsencrypt.org
 
 일단 [letsencrypt 홈피](https://letsencrypt.org "letsencrypt") 에 가보자.
 [Get Started](https://letsencrypt.org/getting-started/)를 눌러 이동해 보면
 영어가 잔뜩 나와 당황할 지 모르지만 핵심 내용은 아래 한줄이 전부이다.
 We recommend that most people with shell access use the [Certbot](https://certbot.eff.org) ACME client.
 
-# https://certbot.eff.org
+
+
+# http\://certbot.eff.org
 
 
 사실 1번의 내용은 읽을 필요가 없지만 혹시나 하는 분들이 있을까 하여 써 보았다.
@@ -35,6 +42,8 @@ System(서버OS)은 뭘 쓰는지? 고르게 되어 있다.
 대부분이 쓰는 Apache혹은 Nginx. Ubuntu혹은 Centos와 같은 Unix서버를 지원하니 자신의 서버에 맞추어 고르자.
 
 그럼 다음 페이지로 자동으로 넘어가는데, Install 부분과 Get Started 부분 까지 설치 명령어만 실행하면 끝!
+
+
 
 # nginx 혹은 apache conf설정 변경
 
@@ -55,16 +64,16 @@ server{
 {% endhighlight %}
 
 443 (https)포트를 기본으로 설정한다.
-(아래 예제는 example.com도 www.example.com로 라우팅 되도록 하였다)
+(아래 예제는 example.com도 www&#46;example.com로 라우팅 되도록 하였다)
 managed by Certbot이라는 주석은 Certbot이 자동으로 삽입해 주었다.
 {% highlight ruby %}
     server {
         listen 443;
-        server_name www.example.com;
+        server_name www&#46;example.com;
 
         ssl on;
-        ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem; # managed by Certbot
-        ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem; # managed by Certbot
+        ssl_certificate /etc/letsencrypt/live/example&#46;com/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/example&#46;com/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
         ...
@@ -75,7 +84,7 @@ managed by Certbot이라는 주석은 Certbot이 자동으로 삽입해 주었�
 {% highlight ruby %}
     server {
         listen 80;
-        server_name example.com www.example.com;
+        server_name example.com www&#46;example.com;
         return 301 https://www.$server_name$request_uri;
     }
 {% endhighlight %}
@@ -93,7 +102,7 @@ service nginx restart 명령어로 nginx를 리스타트 한다.<br>
 </VirtualHost>
 
 <VirtualHost *:443>
-        ServerName example.com
+        ServerName example&#46;com
         DocumentRoot /var/www/html
         
         ...
@@ -108,6 +117,8 @@ service nginx restart 명령어로 nginx를 리스타트 한다.<br>
 </VirtualHost>
 
 {% endhighlight %}
+
+
 
 # 인증서 갱신
 
@@ -128,6 +139,7 @@ crontab -e 를 실행하고, 간단히 아래와 같이 추가하면 된다.
 {% highlight ruby %}
 certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start"
 {% endhighlight %}
+
 
 
 # 적용하자
