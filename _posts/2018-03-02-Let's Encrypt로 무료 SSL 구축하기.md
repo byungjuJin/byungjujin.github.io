@@ -24,7 +24,7 @@ category: 서버
 
 
 
-# http\://letsencrypt.org
+### ht<i></i>tp://letsencrypt.org
 
 일단 [letsencrypt 홈피](https://letsencrypt.org "letsencrypt") 에 가보자.
 [Get Started](https://letsencrypt.org/getting-started/)를 눌러 이동해 보면
@@ -33,7 +33,7 @@ We recommend that most people with shell access use the [Certbot](https://certbo
 
 
 
-# http\://certbot.eff.org
+### ht<i></i>tp://certbot.eff.org
 
 
 사실 1번의 내용은 읽을 필요가 없지만 혹시나 하는 분들이 있을까 하여 써 보았다.
@@ -45,7 +45,7 @@ System(서버OS)은 뭘 쓰는지? 고르게 되어 있다.
 
 
 
-# nginx 혹은 apache conf설정 변경
+### nginx 혹은 apache conf설정 변경
 
 선택한 웹서버 혹은 OS마다 다를 순 있지만, 비슷하게 셋팅을 하면 된다.
 설치시 certonly옵션을 넣지 않는다면 nginx.conf 혹은 httpd.conf(apache의 경우) 값까지도 자동으로 추가해 주었다.
@@ -72,8 +72,8 @@ managed by Certbot이라는 주석은 Certbot이 자동으로 삽입해 주었�
         server_name www&#46;example.com;
 
         ssl on;
-        ssl_certificate /etc/letsencrypt/live/example&#46;com/fullchain.pem; # managed by Certbot
-        ssl_certificate_key /etc/letsencrypt/live/example&#46;com/privkey.pem; # managed by Certbot
+        ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem; # managed by Certbot
+        ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem; # managed by Certbot
         include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
         ...
@@ -84,7 +84,7 @@ managed by Certbot이라는 주석은 Certbot이 자동으로 삽입해 주었�
 {% highlight ruby %}
     server {
         listen 80;
-        server_name example.com www&#46;example.com;
+        server_name example.com www.example.com;
         return 301 https://www.$server_name$request_uri;
     }
 {% endhighlight %}
@@ -102,7 +102,7 @@ service nginx restart 명령어로 nginx를 리스타트 한다.<br>
 </VirtualHost>
 
 <VirtualHost *:443>
-        ServerName example&#46;com
+        ServerName example.com
         DocumentRoot /var/www/html
         
         ...
@@ -120,7 +120,7 @@ service nginx restart 명령어로 nginx를 리스타트 한다.<br>
 
 
 
-# 인증서 갱신
+## 인증서 갱신
 
 무료이기 때문에 인증서의 유효기간이 90일(3개월)으로 짧고 그 기간 이전에 renewal이 필요하다.<br>
 날짜가 얼마 안남았을 때에만 실제 갱신을 수행하고 기간이 남았다면 skip하도록 되어 있기때문에<br>
@@ -142,7 +142,7 @@ certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start"
 
 
 
-# 적용하자
+## 적용하자
 
 공짜로 SSL인증을 쓰게 해주는 Let's Encrypt에 감사한 마음을 가지며<br>
 어렵지 않은 내용이기에 내 사이트에도 https를 적용하도록 하자.
