@@ -14,12 +14,14 @@ layout: default
   </header> <!-- End Header -->
   
   <!-- Category -->
+<section class="contact">
   <ul>
-  {% for category in site.categories %}
-    <li ><a href="#{{ category | cgi_escape }}" class="tag">{{ category }}</a></li>
-    {{ category }}
+  {% for category_name in site.category %}
+    <li ><a href="#{{ category_name | cgi_escape }}">{{ category_name }}</a></li>
+    {{ category_name }}
   {% endfor %}
   </ul>
+</section>
   <!-- End Category -->
   
   <footer>
