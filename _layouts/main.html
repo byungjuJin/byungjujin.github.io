@@ -15,9 +15,9 @@ layout: default
   
   <!-- Category -->
   <ul>
-  {% for category in site.category %}
+  {% for category in site.categories %}
     <li ><a href="#{{ category | cgi_escape }}" class="tag">{{ category }}</a></li>
-    1111
+    {{ category }}
   {% endfor %}
   </ul>
   <!-- End Category -->
