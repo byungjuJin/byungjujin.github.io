@@ -15,9 +15,10 @@ layout: default
   
   <!-- Category -->
   <ul>
-  {% capture category_name %}{% for category in site.category %}
-    <li ><a href="#{{ category_name | cgi_escape }}" class="tag">{{ category_name }}</a></li>
-  {% endfor %}{% endcapture %}
+  {% for category in site.category %}
+    <li ><a href="#{{ category | cgi_escape }}" class="tag">{{ category }}</a></li>
+    1111
+  {% endfor %}
   </ul>
   <!-- End Category -->
   
