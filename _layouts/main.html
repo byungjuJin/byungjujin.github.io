@@ -14,14 +14,11 @@ layout: default
   </header> <!-- End Header -->
   
   <!-- Category -->
-  {% capture site_category %}{% for category in site.category %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-  {% assign category_words = site_category | split:',' | sort %}
-    <ul>
-    {% for item in (0..site.category.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ category_words[item] | strip_newlines }}{% endcapture %}
-      <li ><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.category[this_word].size }})</span></a></li>
-    {% endunless %}{% endfor %}
-    </ul>
+  <ul>
+  {% capture category_name %}{% for category in site.category %}
+    <li ><a href="#{{ category_name | cgi_escape }}" class="tag">{{ category_name }}</a></li>
+  {% endfor %}{% endcapture %}
+  </ul>
   <!-- End Category -->
   
   <footer>
