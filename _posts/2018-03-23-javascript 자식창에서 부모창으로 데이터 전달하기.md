@@ -82,15 +82,15 @@ somFunc(data) {
 
 
 
- ### Angular를 사용한다면 외부의 호출을 받기위해 아래의 작업을 해 주어야 한다.
+#### Angular를 사용한다면 외부의 호출을 받기위해 아래의 작업을 해 주어야 한다.
 자식창에서 부른 window에 선언된 somFunc()이 없기 때문에 선언 및 
-외부 호출을 감지하기 위한 NgZone 사용이 필요하다.
-typings.d.ts 파일
+외부 호출을 감지하기 위한 NgZone 사용이 필요하다.  
+- typings.d.ts 파일  
 {% highlight ruby %}
 interface Window { somFunc(): any; }
 {% endhighlight %}  
 
-부모component 파일
+- 부모component 파일
 {% highlight ruby %}
 constructor(private ngZone: NgZone) {
 }  
