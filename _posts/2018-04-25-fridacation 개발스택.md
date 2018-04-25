@@ -6,15 +6,15 @@ tags: fridacation
 ---
 
 ## fridacation dev stack
-서버 : www.iwinv.co.kr 클라우드 가상 서버
-OS : ubuntu 16.04(64bit)
-web server : nginx
-Frontend : Angular 5.x
-backend : nodeJS 9.x (with Typescript)
-DB : MySql 5.7
-mail : postfix, dovecot
-ssl : Let's Encrypt
-분석 : google analytics
+서버 : www.iwinv.co.kr 클라우드 가상 서버  
+OS : ubuntu 16.04(64bit)  
+web server : nginx  
+Frontend : Angular 5.x  
+backend : nodeJS 9.x (with Typescript)  
+DB : MySql 5.7  
+mail : postfix, dovecot  
+ssl : Let's Encrypt  
+분석 : google analytics  
 
 
 # 서버 : www.iwinv.co.kr 클라우드 가상 서버  
@@ -35,8 +35,6 @@ ssl : Let's Encrypt
 다음에 여유가 좀 생기면 공부삼아 aws로 해볼 생각입니다.  
 
 # OS : ubuntu  
-![nginx]({{site.baseurl}}/assets/img/https_safe.png)
-http://idchowto.com/wp-content/uploads/2015/11/1234-1024x724.png
 centos나 Fedora 등등도 고를 수 있던데  
 stackoverflow 등등 해서 예제로 나온 것들이 ubuntu기반이 많길래  
 ubuntu로 골라봤습니다.  
