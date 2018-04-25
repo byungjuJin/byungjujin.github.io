@@ -17,7 +17,7 @@ ssl : Let's Encrypt
 분석 : google analytics  
 
 
-# 서버 : www.iwinv.co.kr 클라우드 가상 서버  
+### 서버 : www.iwinv.co.kr 클라우드 가상 서버  
 돈버는 거 없이 쓰는 입장이니 싼거를 찾아야 했습니다.  
 유명하기로는 aws가 있겠으나  
 한국에는 lightsail도 런칭 안했고 회사에서 써 본 경험으로는
@@ -34,22 +34,22 @@ ssl : Let's Encrypt
 다만 지금은 저 tier는 신규가입에서 사라졌네요.  
 다음에 여유가 좀 생기면 공부삼아 aws로 해볼 생각입니다.  
 
-# OS : ubuntu  
+### OS : ubuntu  
 centos나 Fedora 등등도 고를 수 있던데  
 stackoverflow 등등 해서 예제로 나온 것들이 ubuntu기반이 많길래  
 ubuntu로 골라봤습니다.  
 딱히 시스템 단을 잘 알지 못하기 때문에  
 ubuntu의 장단점에 대해 쓰긴 어렵네요.
 
-# web server : nginx  
-![nginx](https://cdn-1.wp.nginx.com/wp-content/themes/nginx-theme/assets/img/logo.svg | width=200)  
+### web server : nginx  
+![nginx](https://cdn-1.wp.nginx.com/wp-content/themes/nginx-theme/assets/img/logo.svg?s=200)  
 회사에서는 Apache만 써 봤는데  
 Apache보다 nginx가 더 빠르다고 하고 점유율이라던가 여러가지로 문제될 것이 없기 때문에  
 nginx를 택했습니다. 기본적인 config는 구글링으로 쉽게 해결할 수 있고 (오히려 쉬운듯?)  
 대새라고 하니 써보는 것이 좋은 것 같았습니다.  
 
-# FrontEnd : Angular  
-![Angular](https://angular.io/assets/images/logos/angular/angular.svg | width=200)  
+### FrontEnd : Angular  
+![Angular](https://angular.io/assets/images/logos/angular/angular.svg?s=200)  
 React, Angular, Vue 중 골라야 하는 건데  
 이에 대한 의견은 인터넷에 너무 너무 너무 많습니다.  
 대중성으로는 React > Angular > Vue 이고  
@@ -68,8 +68,8 @@ Angular는 Google에서 만들어서 키워가다보니 개발자들의 반감�
 다음에는 낮은 러닝커브로 유명한 vue도 써보고 싶네요.  
 
 
-# BackEnd : Node.js  
-![Node.js](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png | width=200)  
+### BackEnd : Node.js  
+![Node.js](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png?s=200)  
 많은 한국 회사들이 그렇듯 저도 java를 주로 써왔습니다.  
 그런데 가끔은 문법이 왜 이렇게 복잡할까? 하는 의구심이 많이 들었고  
 | List<String> list = new ArrayList<String>(); 에서 왜 <Sting>을 두번 쓸까? 했는데  
@@ -81,35 +81,35 @@ Angular를 쓰며 Typescript가 편하였기 때문에 node에도 typescript를 
 아 framework는 역시 예제가 많은 express 입니다.
 
 
-# DB : MySql 5.7  
-![MySql](https://pbs.twimg.com/profile_images/1240079072/logo-mysql-170x170_400x400.png | width=200)  
+### DB : MySql 5.7  
+![MySql](https://pbs.twimg.com/profile_images/1240079072/logo-mysql-170x170_400x400.png?s=200)  
 예전에 유행했던 MEAN (MongoDB, Express, Angular, Node)도 있고  
 MongoDB를 쓰는 것이 자연스러울 것 같은데  
 MySql로 충분/가능하고 익숙해서 DB는 기존 사용했던 MySql을 택하였습니다.  
 익숙하여 별 문제없으니 만족합니다.
 
 
-# mail : postfix, dovecot
+### mail : postfix, dovecot
 검색하니 발신은 postfix, 수신은 dovecot 을 사용하는 것이 정석 처럼 되어 있어  
 별 고민없이 셋팅 하였습니다.
 
 
-# ssl : Let's Encrypt
-![Let's Encrypt](https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg | width=200)  
+### ssl : Let's Encrypt
+![Let's Encrypt](https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg?s=200)  
 이것도 검색하니 무료의 정석이어서..  
 HTTPS를 적용하지 않으셨다면 쉬우니 얼른 하시길  
 
 
-# 분석 : google analytics  
+### 분석 : google analytics  
 이것도 무료로 쓰려면 당연히 고르는 것 아닌가요? ㅎㅎ  
 
 
-# 앞으로 하고 싶은것  
+### 앞으로 하고 싶은것  
 docker : 개념이 쌈빡해서 써보고 싶은데, 아직 바빠서 이건 시도해 보지 못했습니다.  
 추후에 docker + 배포 자동화를 해보려고 합니다.  
 
 
-# 마무리  
+### 마무리  
 최신 기술들은 셋팅도 점점 쉬워지고, 점점 1인 개발에 도움을 주는 것 같습니다.  
 이러다 언젠가는 개발자가 필요없어지는 때가 금방 올 수도 있겠다는  
 긴장감도 살짝 들지만, 좋은 것 같네요.  
