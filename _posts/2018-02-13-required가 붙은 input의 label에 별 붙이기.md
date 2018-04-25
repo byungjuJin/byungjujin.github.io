@@ -16,8 +16,7 @@ html에서 form을 작성할 때 아래와 같은 양식을 흔히 쓰게 된다
 </form>
 {% endhighlight %}
 이때 input 박스의 required 여부에 따라 자동으로 Label인 Name옆에 \*을 붙이면 좋을 것 같다.
-일부 CSS 프레임워크에는 지원되고 있는 사항이지만
-순수 css로만 이루어진 [bulma](https://bulma.io/)를 쓰면서 아쉬운 점이었다.
+일부 CSS 프레임워크에는 지원되고 있는 사항이지만 jQuery등이 없이는 지원이 안되어 찾아보았다.
 
 ## css는 parent selector가 없다?
 얼핏 생각하면 required input가 존재하는 엘레멘트의 상위 엘레멘트의 하위 label ㅡㅡ 의 끝에
