@@ -42,14 +42,14 @@ ubuntu로 골라봤습니다.
 ubuntu의 장단점에 대해 쓰긴 어렵네요.
 
 ### web server : nginx  
-![nginx](https://cdn-1.wp.nginx.com/wp-content/themes/nginx-theme/assets/img/logo.svg?s=200)  
+<img src="https://cdn-1.wp.nginx.com/wp-content/themes/nginx-theme/assets/img/logo.svg" width="200">  
 회사에서는 Apache만 써 봤는데  
 Apache보다 nginx가 더 빠르다고 하고 점유율이라던가 여러가지로 문제될 것이 없기 때문에  
 nginx를 택했습니다. 기본적인 config는 구글링으로 쉽게 해결할 수 있고 (오히려 쉬운듯?)  
 대새라고 하니 써보는 것이 좋은 것 같았습니다.  
 
 ### FrontEnd : Angular  
-![Angular](https://angular.io/assets/images/logos/angular/angular.svg?s=200)  
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" width="200">  
 React, Angular, Vue 중 골라야 하는 건데  
 이에 대한 의견은 인터넷에 너무 너무 너무 많습니다.  
 대중성으로는 React > Angular > Vue 이고  
@@ -69,7 +69,7 @@ Angular는 Google에서 만들어서 키워가다보니 개발자들의 반감�
 
 
 ### BackEnd : Node.js  
-![Node.js](https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png?s=200)  
+<img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" width="200">  
 많은 한국 회사들이 그렇듯 저도 java를 주로 써왔습니다.  
 그런데 가끔은 문법이 왜 이렇게 복잡할까? 하는 의구심이 많이 들었고  
 | List<String> list = new ArrayList<String>(); 에서 왜 <Sting>을 두번 쓸까? 했는데  
@@ -82,7 +82,7 @@ Angular를 쓰며 Typescript가 편하였기 때문에 node에도 typescript를 
 
 
 ### DB : MySql 5.7  
-![MySql](https://pbs.twimg.com/profile_images/1240079072/logo-mysql-170x170_400x400.png?s=200)  
+<img src="https://pbs.twimg.com/profile_images/1240079072/logo-mysql-170x170_400x400.png" width="200">  
 예전에 유행했던 MEAN (MongoDB, Express, Angular, Node)도 있고  
 MongoDB를 쓰는 것이 자연스러울 것 같은데  
 MySql로 충분/가능하고 익숙해서 DB는 기존 사용했던 MySql을 택하였습니다.  
@@ -95,7 +95,7 @@ MySql로 충분/가능하고 익숙해서 DB는 기존 사용했던 MySql을 택
 
 
 ### ssl : Let's Encrypt
-![Let's Encrypt](https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg?s=200)  
+<img src="https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg" width="200">  
 이것도 검색하니 무료의 정석이어서..  
 HTTPS를 적용하지 않으셨다면 쉬우니 얼른 하시길  
 
