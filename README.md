@@ -1,3 +1,3 @@
 # HaveBeard Blog
 
-https://havebeard.com
+https://www.havebeard.com
