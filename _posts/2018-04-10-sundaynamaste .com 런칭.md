@@ -1,6 +1,6 @@
 ---
 layout: post
-title: fridacation.com 런칭
+title: sundaynamaste .com 런칭
 date: 2018-04-10 13:50:00 +0900
 tags: fridacation
 ---
@@ -17,7 +17,7 @@ tags: fridacation
 
 몇달간 퇴근 후 혹은 주말에 짬짬이 만들어서  
 일단은 웹사이트의 형태를 갖춘 결과물을 런칭하였습니다.  
-[www.fridacation.com](https://www.fridacation.com)
+[www.sundaynamaste .com](https://www.sundaynamaste .com)
 
 
 아직 별 기능도 없는 것 같지만
