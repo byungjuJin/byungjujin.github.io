@@ -5,15 +5,16 @@ date: 2018-04-25 21:30:00 +0900
 tags: fridacation
 ---
 
-## fridacation dev stack
+## sundaynamaste dev stack
 서버 : www.iwinv.co.kr 클라우드 가상 서버  
 OS : ubuntu 16.04(64bit)  
 web server : nginx  
-Frontend : Angular 5.x  
+Frontend : Angular 9.x  
 backend : nodeJS 9.x (with Typescript)  
-DB : MySql 5.7  
+DB : MySql 8.x  
 mail : postfix, dovecot  
 ssl : Let's Encrypt  
+version control : Git, GitHub  
 분석 : google analytics  
 
 
@@ -99,6 +100,12 @@ MySql로 충분/가능하고 익숙해서 DB는 기존 사용했던 MySql을 택
 이것도 검색하니 무료의 정석이어서..  
 HTTPS를 적용하지 않으셨다면 쉬우니 얼른 하시길  
 
+
+### version control : Git, GitHub    
+이제는 git 으로 모두 통일되어 다른 것을 고려할 이유가 없는 것 같습니다.  
+GitHub, GitLab, gitbucket 등의 git 호스팅 서비스가 있는데
+privacy저장소는 GitLab에서만 무료로 제공하다가 최근 github에서도 무료제공을 시작했습니다.
+큰 차이는 없겠지만 좀 더 눈에 익은 UI를 사용하기 위해 gitlab에서 github로 변경하였습니다.
 
 ### 분석 : google analytics  
 이것도 무료로 쓰려면 당연히 고르는 것 아닌가요? ㅎㅎ  
