@@ -2,7 +2,7 @@
 layout: post
 title: sundaynamaste  개발스택
 date: 2018-04-25 21:30:00 +0900
-tags: fridacation
+tags: sundaynamaste
 ---
 
 ## sundaynamaste dev stack
