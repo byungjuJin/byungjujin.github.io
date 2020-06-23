@@ -125,7 +125,18 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
-          'gatsby-remark-external-links'
+          'gatsby-remark-external-links',
+          {
+            resolve: 'gatsby-remark-embedder',
+            options: {
+              customTransformers: [
+                // Your custom transformers
+              ],
+              services: {
+                // The service-specific options by the name of the service
+              },
+            },
+          }
         ]
       }
     },
@@ -204,5 +215,6 @@ module.exports = {
     },
     'gatsby-plugin-flow',
     'gatsby-plugin-optimize-svgs',
+    'gatsby-plugin-instagram-embed',
   ]
 };
