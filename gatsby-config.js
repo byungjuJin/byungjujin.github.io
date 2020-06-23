@@ -136,7 +136,12 @@ module.exports = {
                 // The service-specific options by the name of the service
               },
             },
-          }
+          },
+          'gatsby-plugin-instagram-embed',
+          {
+            resolve: 'gatsby-remark-figure-caption',
+            options: { figureClassName: 'md-figure' },
+          },
         ]
       }
     },
@@ -215,6 +220,5 @@ module.exports = {
     },
     'gatsby-plugin-flow',
     'gatsby-plugin-optimize-svgs',
-    'gatsby-plugin-instagram-embed',
   ]
 };
