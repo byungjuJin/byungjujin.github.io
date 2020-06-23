@@ -14,6 +14,8 @@ tags:
 javascript에서 array에 .length를 붙여 길이를 구하고자 할때 예상과 달리 동작할 가 있고\
 이로 인해 의도치 않은 동작을 발생시킬 수 있는 위험이 있어 기록해 봅니다.
 
+
+
 # [](https://github.com/byungjuJin/byungjujin.github.io/blob/temp/_posts/2020-01-30-array.length%20%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4.md#length-%EC%9D%98-%ED%95%A8%EC%A0%95)length 의 함정
 
 보통의 경우 .length 를 통해 길이값을 구합니다.
@@ -59,23 +61,28 @@ blist.forEach(
 console.log(leng);
 ```
 
-이와 같이 undefined 를 자동으로 제외시켜주는 forEach를 사용하면 럼 3을 뽑아주거든요.
+이와 같이 undefined 를 자동으로 제외시켜주는 forEach를 사용하면 예상처럼 3을 뽑아주거든요.
 
 이 경우 쉽게 상식적으로 생각하는 length를 뽑는 방법은 이와 같습니다.
 
 ```
-
+const expect = Object.keys(blist).length;
+console.log(expect);
 ```
 
 또 한가지 재미있는 경우를 볼까요?
 
 ```
-
+const c = [];
+c.foo = 'fo';
+c.bar = 'ba';
 ```
 
 이때 c.length와 Object.keys(c).length 의 값은 뭘까요?
 
-# [](https://github.com/byungjuJin/byungjujin.github.io/blob/temp/_posts/2020-01-30-array.length%20%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4.md#javascript%EC%9D%98-%EC%83%81%EC%8B%9D)javascript의 상식
+
+
+# 나와 다른 [](https://github.com/byungjuJin/byungjujin.github.io/blob/temp/_posts/2020-01-30-array.length%20%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4.md#javascript%EC%9D%98-%EC%83%81%EC%8B%9D)javascript의 상식
 
 javascript에는 우리가 기대하지 않는 결과가 가끔 튀어 나오게 됩니다.\
 유명한 Date()의 getMonth() 처럼요.
