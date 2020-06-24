@@ -13,7 +13,7 @@ const LatestPost = ({ edges }: Props) => (
     <p>New Articles</p>
     <ul>
       {edges.map((edge) => (
-        <li>
+        <li key={edge.node.fields.slug}>
           <Link
             to={edge.node.fields.slug}
             key={edge.node.fields.slug}
