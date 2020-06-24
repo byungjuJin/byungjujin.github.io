@@ -1356,6 +1356,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.9.6":
+  version "7.10.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
+  integrity sha512-RzGO0RLSdokm9Ipe/YD+7ww8X2Ro79qiXZF3HU9ljrM+qnJmH1Vqth+hbiQZy761LnMJTMitHDuKVYTk3k4dLw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.1.0", "@babel/template@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.4.tgz#f4b88d1225689a08f5bc3a17483545be9e4ed237"
@@ -3379,6 +3386,15 @@ array.prototype.flat@^1.2.1:
   dependencies:
     define-properties "^1.1.3"
     es-abstract "^1.15.0"
+    function-bind "^1.1.1"
+
+array.prototype.flatmap@^1.2.1:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/array.prototype.flatmap/-/array.prototype.flatmap-1.2.3.tgz#1c13f84a178566042dd63de4414440db9222e443"
+  integrity sha512-OOEk+lkePcg+ODXIpvuU9PAryCikCJyo7GlDG1upleEpQRx6mzL9puEBkozQ5iAx20KV0l3DbyQwqciJtqe5Pg==
+  dependencies:
+    define-properties "^1.1.3"
+    es-abstract "^1.17.0-next.1"
     function-bind "^1.1.1"
 
 arraybuffer.slice@~0.0.7:
@@ -6488,6 +6504,11 @@ es6-iterator@^2.0.3, es6-iterator@~2.0.3:
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
 
+es6-promise@^4.2.8:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+
 es6-promisify@^6.0.0:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-6.0.1.tgz#6edaa45f3bd570ffe08febce66f7116be4b1cdb6"
@@ -7201,6 +7222,13 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+fetch-retry@^3.1.0:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/fetch-retry/-/fetch-retry-3.2.3.tgz#ed5f8a91d6cb3b25cfa96a8b676c96564df0c7d7"
+  integrity sha512-baMBEv4uZ1X1cUZAvnM+C9XI7tl4CgHgJE0KBHo3JzuXO7atOeWD5HSkDA2oLYpbzLTZNslFckLkIn6T96hlew==
+  dependencies:
+    es6-promise "^4.2.8"
+
 figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
@@ -7750,6 +7778,11 @@ gatsby-plugin-google-gtag@^2.0.0:
     "@babel/runtime" "^7.8.7"
     minimatch "^3.0.4"
 
+gatsby-plugin-instagram-embed@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-instagram-embed/-/gatsby-plugin-instagram-embed-2.0.1.tgz#bb619961783631cd9216f4baccab30280d78e8f5"
+  integrity sha512-CdzezDgYz73dLArWEs/eZtIZEMgytBtHqNDYfFSSOn9SM5aQvhsJGwNNg54zlPlOrDqVLc7a4DEDJWFIWk496A==
+
 gatsby-plugin-manifest@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.3.3.tgz#119b9e648428a0db8979d577d2fdb20a9f3c18b7"
@@ -7904,6 +7937,16 @@ gatsby-remark-copy-linked-files@^2.2.1:
     probe-image-size "^4.1.1"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-embedder@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-embedder/-/gatsby-remark-embedder-2.1.1.tgz#a5d11534e4ab1212c760f48f8204c28a7fbadf2a"
+  integrity sha512-UemRq+Bcksugj+lqvDshd/iGLpO3lsyoI6wiBUIZWl2/wKyS13Q0rJCJJrdJd/PcsvlGK0q6xmMSkQz2sGQpDA==
+  dependencies:
+    "@babel/runtime" "^7.9.6"
+    fetch-retry "^3.1.0"
+    node-fetch "^2.6.0"
+    unist-util-visit "^2.0.2"
+
 gatsby-remark-external-links@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-remark-external-links/-/gatsby-remark-external-links-0.0.4.tgz#85b98c1e9dacfaa58085319648c904ff3cab42f0"
@@ -7912,6 +7955,15 @@ gatsby-remark-external-links@0.0.4:
     is-relative-url "^2.0.0"
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
+
+gatsby-remark-figure-caption@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-figure-caption/-/gatsby-remark-figure-caption-2.0.0.tgz#0f6149ef3894f291fc6c9b3f1af34f3565621d60"
+  integrity sha512-ec+APzwhtAEUa2K6WyVZwkIViLoRz6sGSiQuZe2jPUwcwhs3DilOjNO0ZCUAWyiqesgJJofbIxvwbIGEQopnOg==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    array.prototype.flatmap "^1.2.1"
+    unist-util-visit "^1.4.0"
 
 gatsby-remark-images@^3.2.2:
   version "3.2.2"
@@ -17777,7 +17829,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3, unist-util-visit@^1.4.0, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
@@ -17788,6 +17840,15 @@ unist-util-visit@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.1.tgz#b4e1c1cb414250c6b3cb386b8e461d79312108ae"
   integrity sha512-bEDa5S/O8WRDeI1mLaMoKuFFi89AjF+UAoMNxO+bbVdo06q+53Vhq4iiv1PenL6Rx1ZxIpXIzqZoc5HD2I1oMA==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit-parents "^3.0.0"
+
+unist-util-visit@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.2.tgz#3843782a517de3d2357b4c193b24af2d9366afb7"
+  integrity sha512-HoHNhGnKj6y+Sq+7ASo2zpVdfdRifhTgX2KTU3B/sO/TTlZchp7E3S4vjRzDJ7L60KmrCPsQkVK3lEF3cz36XQ==
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
