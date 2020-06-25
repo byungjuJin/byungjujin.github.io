@@ -5,4 +5,4 @@ socialImage: /media/image-4.jpg
 slug: Contact me
 draft: true
 ---
-jinbju@gmail.com
+email : jinbju@gmail.com
