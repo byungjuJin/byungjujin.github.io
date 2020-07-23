@@ -54,8 +54,7 @@ socialImage: /media/image-2.jpg
 > 요즘 대학생들이 많이 쓰는 에브리타임의 과~거 버전인 서비스 였습니다.
 >
 > <http://www.hani.co.kr/arti/society/society_general/270719.html>
->
-> 시대를 조금 앞서갔습니다.
+
 
 ## 취업
 
