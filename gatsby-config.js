@@ -155,22 +155,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: [siteConfig.googleAnalyticsId],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
-    {
-      resolve: '@isamrish/gatsby-plugin-google-adsense',
-      options: {
-        googleAdClientId: 'ca-pub-8429303928050523',
-        head: true // Optional
-      }
-    },
-    {
       resolve: '@isamrish/gatsby-plugin-google-adsense',
       options: {
         googleAdClientId: 'ca-pub-8429303928050523',
