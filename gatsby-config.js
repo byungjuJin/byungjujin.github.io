@@ -171,6 +171,13 @@ module.exports = {
       }
     },
     {
+      resolve: '@isamrish/gatsby-plugin-google-adsense',
+      options: {
+        googleAdClientId: 'ca-pub-8429303928050523',
+        head: true // Optional
+      }
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         query: `
