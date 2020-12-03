@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://havebeard.com',
   pathPrefix: '/',
-  title: 'HaveBeard',
+  title: 'HaveBeard 😀',
   subtitle: '',
   copyright: '© All rights reserved.',
   disqusShortname: 'havebeard',
