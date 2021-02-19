@@ -4,6 +4,10 @@ title: dynamic imports로 SSR의 window 오류 해결
 date: 2021-02-19T05:07:40.611Z
 description: es6 의 dynamic import 적용
 category: javascript
+tags:
+  - import
+  - tui.editor
+  - ssr
 ---
 ## window is not defined
 Angular Universal (Server Side Rendering) 을 사용하다보니 가끔 의도치 않은 오류가 발생합니다.
@@ -36,7 +40,38 @@ initEditor() {
         initialValue: this.initialValue,
    });
 }
-
 ```
 
-대신 아래와 같이 
+대신 아래와 같이 변경해 주면 됩니다.
+```javascript
+async initEditor() {
+   const tuiEditor = await import('@toast-ui/editor');
+   this.editor = await new tuiEditor.default({
+      el: this.toast.nativeElement,
+      height: 'auto',
+      initialValue: this.initialValue,
+   });
+}
+```
+
+참고로 react 진영의 Next.js 에서는 아래 링크를 참조하 브라우저에서만 import 되게 할 수 있다고 합니다.
+[with-no-ssr](https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr)
+
+위와 동일한 최종적 Angular의 코드는 아래와 같습니다.
+isBrowser() 체크로 한번 감싸주면 첫페이지에서 사용되더라도 브라우저에서만 실행되니 문제없습니다. [isBrowser참조](https://ksrae.github.io/angular/universal-platform/)
+```javascript
+async initEditor() {
+   if (isBrowser()) {
+      const tuiEditor = await import('@toast-ui/editor');
+      this.editor = await new tuiEditor.default({
+         el: this.toast.nativeElement,
+         height: 'auto',
+         initialValue: this.initialValue,
+      });
+   }
+}
+```
+
+## SPA과 SSR
+SEO를 위해 SPA를 가지고 다시 SSR을 하다보니 억지로 방법을 계속 만들어내야 하는 것 아닌가 하는 생각이 들지만, svelte 라던지 prerendering(scully)라던 새로운 방식이 유행이 되기 전까지는 개념을 잘 알고 접근해 사용자에게 잘 전달하는 방법을 찾아내서 적용해야겠습니다.
+Javascript 의 유행은 꽤나 빨리 변화하는 것 같으니까요.
