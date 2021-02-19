@@ -20,8 +20,23 @@ window is not defined 오류가 나는 것 입니다.
 ## dynamic imports 
 dynamic imports는 우선 초기로딩 시 첫화면에서 쓰이지 않는 불필요한 스크립트를 로딩하지 않고 있다가, 필요한 페이지에 들어가면 그제서야 로딩하는 lazy loading 을 할 수 있도록 해주는 장점이 있어서 쓰이고 있습니다.
 
-다만 일반적(es5 이하)인 Javascript 만으로는 지원이 되지 않기 때문에 es6, webpack 등을 추가로 이용하여야 합니다. 이제는 Typescript 가 대세가 된 마당에 아직 써보지 않으신 분들은 typescript와 webpack 등을 이용해 다음세대의 js를 접하시면 좋을 것 같습니다.
+다만 일반적(es5 이하)인 Javascript(브라우저)에는 지원이 되지 않기 때문에 es6, webpack 등을 추가로 이용하여야 합니다. 이제는 Typescript 가 대세가 된 마당에 아직 써보지 않으신 분들은 typescript와 webpack 등을 이용해 다음세대의 js를 접하시면 좋을 것 같습니다.
 
 ## 적용
 사용중 문제가 되었던 라이브러리는 [tui editor](https://github.com/nhn/tui.editor)로 SSR을 지원하지 않는다 합니다.
+그런줄 모르고 import Editor from '@toast-ui/editor'; 을 사용하여 import를 해 놓았더니 런타임시 오류가 발생하였습니다.
 
+```javascript
+import Editor from '@toast-ui/editor';
+...
+initEditor() {
+   this.editor = await new Editor({
+        el: this.toast.nativeElement,
+        height: 'auto',
+        initialValue: this.initialValue,
+   });
+}
+
+```
+
+대신 아래와 같이 
