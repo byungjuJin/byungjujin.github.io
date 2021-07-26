@@ -23,7 +23,7 @@ const Sidebar = ({ isIndex }: Props) => {
         <Menu menu={menu}/>
         <Contacts contacts={author.contacts}/>
         <Copyright copyright={copyright}/>
-        <LatestPost edges={edges}/>
+        { edges && <LatestPost edges={edges}/>}
       </div>
     </div>
   );
