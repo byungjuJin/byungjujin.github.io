@@ -69,7 +69,7 @@
     "gatsby-remark-responsive-iframe": "^4.7.0",
     "gatsby-remark-smartypants": "^4.7.0",
     "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-transformer-remark": "^4.7.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.10.0",
     "invariant": "^2.2.4",
     "katex": "^0.13.13",
